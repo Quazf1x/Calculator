@@ -96,6 +96,7 @@ function round (num){
   if(num.toString().length>13){
   const factor = Math.pow(10,10);
   return Math.round(num*factor)/factor;}
+  else return num;
 }
 
 
