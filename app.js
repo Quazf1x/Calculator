@@ -59,6 +59,7 @@ function evaluate(){
 }
 
 function addNumber(number){
+  if(number =='.' && lowerField.textContent.includes('.')) return;
   if(lowerField.textContent.length<13)
   lowerField.textContent += number;
 }
@@ -75,21 +76,27 @@ function operate(currentOperator, firstNum, secondNum){
     case '/':
       if(secondNum==0)
       return "Can't do that!";
-     return divide(firstNum,secondNum);
+      return round(divide(firstNum,secondNum));
       break;
     case 'x':
-      return multiply(firstNum,secondNum);
+      return round(multiply(firstNum,secondNum));
       break;
     case '+':
-      return add(firstNum,secondNum);
+      return round(add(firstNum,secondNum));
       break;
     case '-':
-     return substract(firstNum,secondNum);
+     return round(substract(firstNum,secondNum));
       break;
     default:
       return null;
   };
 };
+
+function round (num){
+  if(num.toString().length>13){
+  const factor = Math.pow(10,10);
+  return Math.round(num*factor)/factor;}
+}
 
 
 function add(a,b) {
