@@ -41,7 +41,7 @@ document.addEventListener('keydown',(e)=>{
   else if(e.key == '=' || e.key =='Enter')
   evaluate();
 })
-
+//functions
 function operateButton(button){
     currentOperator = button;
     firstNum = lowerField.textContent;
