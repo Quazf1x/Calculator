@@ -34,11 +34,11 @@ document.addEventListener('keydown',(e)=>{
   const operations = ['/','+','-','*','x'];
   if(operations.includes(e.key))
   operateButton(e.key);
-  if(e.key >= 0 && e.key <= 9 || e.key=='.')
+  else if(e.key >= 0 && e.key <= 9 || e.key=='.')
   addNumber(e.key);
-  if(e.key == 'Backspace')
+  else if(e.key == 'Backspace')
   deleteNumber();
-  if(e.key == '=' || e.key =='Enter')
+  else if(e.key == '=' || e.key =='Enter')
   evaluate();
 })
 
