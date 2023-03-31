@@ -4,12 +4,14 @@
   --first-accent-color:#3FC1C9;
   --second-accent-color:#FC5185;
 }
-
+html{
+  background-color: #ededed;
+}
 section{
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 80svh;
+  height: 590px;
   padding-top: 60px;
 }
 
@@ -47,6 +49,7 @@ section{
 }
 
 .last-operation{
+  height: 40%;
   color:var(--screen-color);
   margin-top: 5px;
   font-size: 1.5rem;;
@@ -56,7 +59,7 @@ section{
   font-size: 2rem;
   width: 100%;
   margin-top: 10px;
-  height: 60%;
+  height: 40%;
 }
 .buttons-grid{
   display: grid;
